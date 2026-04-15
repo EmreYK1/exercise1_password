@@ -56,10 +56,17 @@ console.log(isStrongPassword("pC%mD8TpCKn2")); // true
 - Zero dependencies.
 - Written in plain JavaScript.
 
-## Contributing
+## Documentation
 
-Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+For more information, please refer to the following documents:
 
-## License
+- [Contributing Guidelines](./CONTRIBUTING.md)
+- [Security Policy](./SECURITY.md)
+- [License](./LICENSE.md)
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+## Templates
+
+- [Issue Template](./ISSUE_TEMPLATE.md)
+- [Feature Request Template](./FEATURE_REQUEST_TEMPLATE.md)
+- [Pull Request Template](./PULL_REQUEST_TEMPLATE.md)
+
