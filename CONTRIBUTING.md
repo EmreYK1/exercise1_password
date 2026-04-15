@@ -1,6 +1,6 @@
 # Contributing Guidelines
 
-Thank you for considering contributing to `@antigravity/password-utilities`!
+Thank you for considering contributing to `@emreyk1/password-utilities`!
 
 ## How to Contribute
 

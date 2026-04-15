@@ -1,4 +1,4 @@
-# @antigravity/password-utilities
+# @emreyk1/password-utilities
 
 A small, useful JavaScript library that provides password utility functions. This library helps you generate passwords and check their strength.
 
@@ -7,23 +7,23 @@ A small, useful JavaScript library that provides password utility functions. Thi
 You can install the package via npm:
 
 ```bash
-npm install @antigravity/password-utilities
+npm install @emreyk1/password-utilities
 ```
 
 Or via yarn:
 
 ```bash
-yarn add @antigravity/password-utilities
+yarn add @emreyk1/password-utilities
 ```
 
 ## Usage
 
 ### `generateStrongPassword(length)`
 
-Generates a random password of the specified length.
+Generates a random password of the specified length. The function guarantees that the returned password meets all "strong" criteria by internally validating it against `isStrongPassword`.
 
 ```javascript
-const { generateStrongPassword } = require('@antigravity/password-utilities');
+const { generateStrongPassword } = require('@emreyk1/password-utilities');
 
 // Generate a password with default length (12)
 const password = generateStrongPassword();
@@ -44,7 +44,7 @@ Checks if a password meets the strength criteria:
 - Contains at least one special character (`!@#$%^&*()_+`)
 
 ```javascript
-const { isStrongPassword } = require('@antigravity/password-utilities');
+const { isStrongPassword } = require('@emreyk1/password-utilities');
 
 console.log(isStrongPassword("Hello World")); // false
 console.log(isStrongPassword("pC%mD8TpCKn2")); // true

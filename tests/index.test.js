@@ -1,20 +1,32 @@
 const { generateStrongPassword, isStrongPassword } = require('../src/index');
 
-describe('Step 4: Password Utilities initial tests', () => {
-  test('generateStrongPassword should return a string of the correct length', () => {
-    const length = 10;
-    const result = generateStrongPassword(length);
-    expect(result).toHaveLength(length);
-    expect(typeof result).toBe('string');
+describe('Password Utilities Unit Tests', () => {
+  describe('isStrongPassword', () => {
+    test('should return true for a strong password', () => {
+      expect(isStrongPassword('pC%mD8TpCKn2')).toBe(true);
+    });
+
+    test('should return false for a short password', () => {
+      expect(isStrongPassword('weak')).toBe(false);
+    });
+
+    test('should return false for "Hello World"', () => {
+      expect(isStrongPassword('Hello World')).toBe(false);
+    });
   });
 
-  test('isStrongPassword should identify a weak password', () => {
-    expect(isStrongPassword('weak')).toBe(false);
-  });
+  describe('generateStrongPassword', () => {
+    test('should return a string of the correct length', () => {
+      const length = 10;
+      const result = generateStrongPassword(length);
+      expect(result).toHaveLength(length);
+    });
 
-  test('isStrongPassword should identify a potentially strong password', () => {
-    // Note: The flawed generator might not always produce a strong password,
-    // but the checker should still work.
-    expect(isStrongPassword('pC%mD8TpCKn2')).toBe(true);
+    test('should guaranteed return a strong password (verified 100 times)', () => {
+      for (let i = 0; i < 100; i++) {
+        const password = generateStrongPassword(12);
+        expect(isStrongPassword(password)).toBe(true);
+      }
+    });
   });
 });
